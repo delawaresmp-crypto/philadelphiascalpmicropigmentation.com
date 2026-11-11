@@ -17,6 +17,7 @@ MAPS = "https://www.google.com/maps/search/?api=1&query=2601+Annand+Drive+Unit+1
 MAIN = "https://delawarescalpmicropigmentation.com/"
 IG = "https://www.instagram.com/delaware_smp/"
 DM = "https://ig.me/m/delaware_smp"
+CHERRY = "https://pay.withcherry.com/delawarescalpmicropigmentation"
 
 IMG = {
  "hero": ("2026/08/best-scalp-micropigmentation-before-and-after-delaware-smp-joey-dots.jpg", "Scalp micropigmentation before and after by Joey Dots"),
@@ -152,7 +153,7 @@ def book_section(up=""):
 <div class="contact-list">
 <p>Rather talk now? Call <a href="tel:{TEL}">{PHONE}</a></p>
 <p>Or DM me on Instagram: <a href="{DM}">@delaware_smp</a>. That's the fastest way to reach me.</p>
-<p>Consults are free. Financing through PayPal Credit and Cherry.</p>
+<p>Consults are free. Financing through PayPal Credit and Cherry. <a href="{CHERRY}">Apply for Cherry financing here</a>.</p>
 </div>
 </div>
 <form class="book-form" action="https://formsubmit.co/delawaresmp@gmail.com" method="POST">
@@ -266,7 +267,7 @@ home = f"""
 <div><h3>I teach it</h3><p>I train new SMP artists through the Delaware SMP Training Academy.</p></div>
 <div><h3>I talk about it</h3><p>Hair loss and SMP videos on my YouTube channel, <a href="https://www.youtube.com/@dotdattie">Dot Dattie World</a>, and on the Dot Dattie Podcast.</p></div>
 <div><h3>Navy veteran</h3><p>I tell you straight, including when SMP isn't right for you.</p></div>
-<div><h3>Pay over time</h3><p>Free consults. Financing through PayPal Credit and Cherry.</p></div>
+<div><h3>Pay over time</h3><p>Free consults. Financing through PayPal Credit and Cherry.</p><p><a class="btn gold" href="{CHERRY}">Apply for financing</a></p></div>
 </div>
 </div>
 </section>
@@ -281,7 +282,7 @@ home = f"""
 <li>You work with me, not whoever is on shift. I do the consult and I do the work.</li>
 <li>800+ clients and 3,000+ sessions. I've seen pretty much every kind of hair loss.</li>
 <li>My own SMP is about 10 years old with 12+ sessions. I'm my own experiment, so I know how it holds up.</li>
-<li>Free consults, and financing through PayPal Credit and Cherry.</li>
+<li>Free consults, and financing through PayPal Credit and Cherry. <a href="{CHERRY}">Apply with Cherry</a>.</li>
 <li>Navy veteran. I tell you straight if SMP isn't right for you.</li>
 </ul>
 <a class="btn" href="about.html">More about me</a>
@@ -426,7 +427,7 @@ page("services.html", "SMP Services for Philadelphia | Hairline, Thinning, Scars
 # ---------------- PRICING / FAQ ----------------
 faqs = [
  ("How much does SMP cost?", "Most full treatments land between $2,000 and $3,500. Smaller areas cost less, bigger areas cost more. I give you an exact price at your free consult."),
- ("Do you offer financing?", "Yes. PayPal Credit and Cherry. Ask about it at your consult."),
+ ("Do you offer financing?", "Yes. PayPal Credit and Cherry. You can apply for Cherry online before your consult at pay.withcherry.com/delawarescalpmicropigmentation."),
  ("How many sessions will I need?", "Usually 3 to 4 sessions, spaced 2 to 3 weeks apart. The whole thing takes about 5 to 8 weeks."),
  ("How long is each session?", "About 2 to 4 hours, depending on the area."),
  ("Does it hurt?", "Everyone's different, but most people say it's more annoying than painful."),
@@ -447,7 +448,7 @@ faq_schema = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "
 pricing = f"""
 <section class="band">
 <div class="wrap narrow">
-<div class="callout"><strong>Ballpark:</strong> most full treatments are $2,000 to $3,500. Free consult, exact quote, and financing through PayPal Credit and Cherry.</div>
+<div class="callout"><strong>Ballpark:</strong> most full treatments are $2,000 to $3,500. Free consult, exact quote, and financing through PayPal Credit and Cherry.<p style="margin:12px 0 0"><a class="btn gold" href="{CHERRY}">Apply for Cherry financing</a></p></div>
 <h2>Cheap SMP costs more later</h2>
 <p>I see it every month. Someone pays a few hundred bucks somewhere, the dots blur or turn blue, and now they need it corrected. Fixing bad SMP takes longer than doing it right the first time. Ask whoever you go to how many heads they've done and look at healed work, not just fresh photos.</p>
 <h2 style="margin-top:34px">Questions people ask me</h2>
@@ -551,7 +552,7 @@ posts = [
 <h2>Session days</h2>
 <p>Each session runs about 2 to 4 hours. Most people need 3 to 4 sessions, 2 to 3 weeks apart. You can go back to work the same day. Just skip the gym and keep your scalp dry for 3 to 4 days.</p>
 <h2>Paying for it</h2>
-<p>Financing is available through PayPal Credit and Cherry.</p>"""),
+<p>Financing is available through PayPal Credit and Cherry. You can <a href="https://pay.withcherry.com/delawarescalpmicropigmentation">apply for Cherry online</a> before you come in.</p>"""),
  ("hair-shedding-weight-loss-and-smp.html", "Shedding after weight loss? Where SMP fits and where it doesn't",
   "Hair shedding searches are way up. Here's when SMP helps, when to wait, and when to see a doctor first.",
   """<p>More people are asking me about hair shedding than ever, a lot of it after losing weight fast, including on the new weight loss shots. Here's how I look at it.</p>
