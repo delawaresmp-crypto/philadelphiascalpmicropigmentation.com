@@ -158,6 +158,7 @@ def book_section(up=""):
 </div>
 <form class="book-form" action="https://formsubmit.co/delawaresmp@gmail.com" method="POST">
 <input type="hidden" name="_subject" value="New SMP consult request from {DOMAIN}">
+<input type="hidden" name="_cc" value="claudedesmp@gmail.com">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="{BASE}/thanks.html">
@@ -209,6 +210,7 @@ home = f"""
 <form class="book-form quick" action="https://formsubmit.co/delawaresmp@gmail.com" method="POST">
 <p class="qf-title">Free consult. Takes 20 seconds.</p>
 <input type="hidden" name="_subject" value="New SMP consult request from {DOMAIN} (quick form)">
+<input type="hidden" name="_cc" value="claudedesmp@gmail.com">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="{BASE}/thanks.html">
