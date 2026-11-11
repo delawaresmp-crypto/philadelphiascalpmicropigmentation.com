@@ -53,7 +53,7 @@ SCHEMA = {
  "@context": "https://schema.org", "@type": "HealthAndBeautyBusiness",
  "name": "Delaware Scalp Micropigmentation", "alternateName": ["Delaware SMP", "Philadelphia Scalp Micropigmentation"],
  "url": BASE + "/", "telephone": "+1-302-292-0380", "email": "delawaresmp@gmail.com",
- "image": WP + IMG["hero"][0],
+ "image": WP + IMG["hero"][0], "logo": BASE + "/img/philadelphia-scalp-micropigmentation-logo.webp",
  "address": {"@type": "PostalAddress", "streetAddress": "2601 Annand Drive, Unit 16", "addressLocality": "Wilmington",
              "addressRegion": "DE", "postalCode": "19808", "addressCountry": "US"},
  "areaServed": [{"@type": "City", "name": "Philadelphia"}, {"@type": "AdministrativeArea", "name": "Delaware County, PA"},
@@ -86,7 +86,9 @@ def page(path, title, desc, body, h1=None, sub=None, crumbs=None, noindex=False)
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{canon}">
-<meta property="og:image" content="{WP}{IMG['hero'][0]}">
+<meta property="og:image" content="{BASE}/img/philadelphia-scalp-micropigmentation-og.jpg">
+<link rel="icon" type="image/png" href="{up}img/favicon.png">
+<link rel="apple-touch-icon" href="{up}img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;600&display=swap">
@@ -98,7 +100,7 @@ def page(path, title, desc, body, h1=None, sub=None, crumbs=None, noindex=False)
 {schema}
 <header class="site-head">
 <div class="wrap">
-<a class="brand" href="{up}index.html">Philadelphia Scalp Micropigmentation<small>by Delaware SMP · Joey Dots</small></a>
+<a class="brand" href="{up}index.html"><img src="{up}img/phl-smp-logo-round.webp" alt="" width="46" height="46"><span>Philadelphia Scalp Micropigmentation<small>by Delaware SMP · Joey Dots</small></span></a>
 <nav aria-label="Main">{nav}</nav>
 <a class="head-cta" href="tel:{TEL}">Call {PHONE}</a>
 </div>
@@ -107,6 +109,7 @@ def page(path, title, desc, body, h1=None, sub=None, crumbs=None, noindex=False)
 {head_block}
 {body}
 </main>
+<div class="logo-band"><img src="{up}img/philadelphia-scalp-micropigmentation-logo.webp" alt="Philadelphia Scalp Micropigmentation" width="420" height="420" loading="lazy"></div>
 <footer class="site-foot">
 <div class="wrap">
 <div>
@@ -189,6 +192,7 @@ home = f"""
 <section class="hero">
 <div class="wrap">
 <div>
+<img class="hero-logo" src="img/philadelphia-scalp-micropigmentation-logo.webp" alt="Philadelphia Scalp Micropigmentation logo: We can change your life" width="260" height="260" fetchpriority="high">
 <p class="eyebrow">Scalp micropigmentation for Philadelphia</p>
 <h1>Get your hairline back.</h1>
 <p class="lead"><strong>31 miles from Philadelphia International Airport (PHL).</strong> I-95 South to Exit 5A-B (DE-141 North), then Kirkwood Highway (DE-2) to Annand Drive. About 40 minutes.</p>
@@ -642,6 +646,7 @@ page("thanks.html", "Thanks | Philadelphia Scalp Micropigmentation", "Your consu
 # ---------------- static files ----------------
 import shutil
 shutil.copy(os.path.join(os.path.dirname(__file__), "style.css"), os.path.join(OUT, "style.css"))
+shutil.copytree(os.path.join(os.path.dirname(__file__), "img"), os.path.join(OUT, "img"), dirs_exist_ok=True)
 if not PREVIEW:
     open(os.path.join(OUT, "CNAME"), "w").write(DOMAIN + "\n")
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
