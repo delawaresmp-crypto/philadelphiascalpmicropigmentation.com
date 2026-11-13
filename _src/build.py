@@ -98,6 +98,7 @@ def page(path, title, desc, body, h1=None, sub=None, crumbs=None, noindex=False)
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+{'<div style="background:#ff0622;color:#fff;text-align:center;padding:10px;font-weight:700">Preview only. Photos show on the test site: <a style="color:#fff" href="https://delawaresmp-crypto.github.io/philadelphiascalpmicropigmentation.com/">delawaresmp-crypto.github.io/philadelphiascalpmicropigmentation.com</a></div>' if PREVIEW else ''}
 {schema}
 <header class="site-head">
 <div class="wrap">
@@ -161,7 +162,7 @@ def book_section(up=""):
 <input type="hidden" name="_cc" value="claudedesmp@gmail.com">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="{BASE}/thanks.html">
+<input type="hidden" name="_next" value="http://{DOMAIN}/thanks.html">
 <input type="hidden" name="Website" value="{DOMAIN}">
 <input type="hidden" name="Came from" class="src" value="Direct or unknown">
 <input type="hidden" name="Page" class="pg" value="">
@@ -213,7 +214,7 @@ home = f"""
 <input type="hidden" name="_cc" value="claudedesmp@gmail.com">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="{BASE}/thanks.html">
+<input type="hidden" name="_next" value="http://{DOMAIN}/thanks.html">
 <input type="hidden" name="Website" value="{DOMAIN} (home page quick form)">
 <input type="hidden" name="Came from" class="src" value="Direct or unknown">
 <input type="hidden" name="Page" class="pg" value="">
